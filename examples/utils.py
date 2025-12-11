@@ -8,7 +8,7 @@ import os
 from pathlib import Path
 
 import import_helper
-from spatialize.viz import plot_colormap_data, PlotStyle
+from spatialize.viz import PlotStyle, plot_colormap_data, plot_nongriddata
 
 class SyntheticScenario:
     def __init__(self,
@@ -133,19 +133,21 @@ class SyntheticScenario:
 
         with PlotStyle(theme=theme, cmap=cmap) as style:
             fig, ax = plt.subplots(1,1, figsize=figsize, dpi=dpi)
-            plot_colormap_data(reference_values, ax=ax, xi_locations=xi,
-                               griddata=self.griddata, cmap = style.cmap, extent=self.extent,)
+            if self.griddata:
+                plot_colormap_data(reference_values, ax=ax, xi_locations=xi,
+                                griddata=self.griddata, cmap = style.cmap, extent=self.extent)
+            else:
+                plot_nongriddata(reference_values, xi_locations=xi, ax=ax, cmap = style.cmap)
             ax.scatter(points[:, 0], points[:, 1], s=point_size, color=point_color)
             ax.set_title(title)
             return fig, ax
 
-    
+
 class PrecipitationCaseStudy:
     def __init__(self):
 
         self._load_data()
         self._setup_environment()
-
 
     def _load_data(self):
         import geopandas as gpd
