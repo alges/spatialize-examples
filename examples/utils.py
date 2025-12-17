@@ -796,7 +796,7 @@ class PrecipitationCaseStudy:
                                         cmap = self.data_cmap, clim = (0, 100), zorder = 1, extent = self.extent)
             
             # Annotate parameters
-            if parameters:
+            if parameters is not None:
                 if local_interpolator=='idw':
                     axs[1,j].text(252000, 6340000,
                                 f"alpha = {parameters.loc[date, 'alpha']}\nexp = {parameters.loc[date, 'exponent']}",
