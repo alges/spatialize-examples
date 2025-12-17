@@ -725,7 +725,8 @@ class PrecipitationCaseStudy:
 
         return fig, ax
     
-    def plot_esi_results(self, results, parameters,
+    def plot_esi_results(self, results,
+                         parameters=None,
                          local_interpolator='idw',
                          precision_function='Operational Error',
                          fig_title='ESI Results',
@@ -795,14 +796,15 @@ class PrecipitationCaseStudy:
                                         cmap = self.data_cmap, clim = (0, 100), zorder = 1, extent = self.extent)
             
             # Annotate parameters
-            if local_interpolator=='idw':
-                axs[1,j].text(252000, 6340000,
-                              f"alpha = {parameters.loc[date, 'alpha']}\nexp = {parameters.loc[date, 'exponent']}",
-                              fontsize = 8.5)
-            elif local_interpolator == 'kriging':
-                axs[1,j].text(252000, 6205000,
-                              f"alpha = {parameters.loc[date, 'alpha']}\nmodel = {parameters.loc[date, 'model']}\nnugget = {parameters.loc[date, 'nugget']}\nrange = {parameters.loc[date, 'range']}",
-                              fontsize = 7.5)
+            if parameters:
+                if local_interpolator=='idw':
+                    axs[1,j].text(252000, 6340000,
+                                f"alpha = {parameters.loc[date, 'alpha']}\nexp = {parameters.loc[date, 'exponent']}",
+                                fontsize = 8.5)
+                elif local_interpolator == 'kriging':
+                    axs[1,j].text(252000, 6205000,
+                                f"alpha = {parameters.loc[date, 'alpha']}\nmodel = {parameters.loc[date, 'model']}\nnugget = {parameters.loc[date, 'nugget']}\nrange = {parameters.loc[date, 'range']}",
+                                fontsize = 7.5)
 
             # Precision plot
             precision_plot = axs[2,j].imshow(np.flipud(results_array[(date, 'precision')].T),
