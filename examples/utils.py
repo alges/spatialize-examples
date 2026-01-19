@@ -28,7 +28,6 @@ import sys
 import os
 from pathlib import Path
 
-import import_helper
 from spatialize.viz import PlotStyle, plot_colormap_data, plot_nongriddata
 
 
