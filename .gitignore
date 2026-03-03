@@ -208,5 +208,6 @@ __marimo__/
 .DS_Store
 testing.ipynb
 CLAUDE.md
-venv
-venv_test
+venv*/
+.python-version
+*.qmd
