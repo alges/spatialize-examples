@@ -1,10 +1,18 @@
-geopandas
-matplotlib
+# Core package
+spatialize==1.1.1
+
+# Data and computation
 numpy
 pandas
-pykrige
-scikit_learn
 scipy
+scikit-learn
+pykrige
+
+# Visualization
+matplotlib
 seaborn
 xarray
-spatialize
+geopandas
+
+# Jupyter environment (for running notebooks)
+jupyter
