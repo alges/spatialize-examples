@@ -1,6 +1,13 @@
 # Spatialize Examples
 Here you will find examples and tutorials for Spatialize, the Python package for Ensemble Spatial Analysis.
 
+> **Note: The examples contained within the `main` branch are compatible with the latest release of `spatialize`: currently, `spatialize v1.1.1`**.
+> If you are using an older version of `spatialize`, checkout the matching tag to ensure notebook compatibility:
+
+```bash
+git checkout v1.1.0		# examples compatible with spatialize 1.1.0
+```
+
 ## Contributing
 If you are interested in contributing to the Spatialize example notebooks, please contact us at [contacto\@alges.cl](contacto\@alges.cl).
 
