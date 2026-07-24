@@ -209,21 +209,34 @@ Beyond the snippets above, this repo contains full notebooks organized by topic:
 ## Citing Spatialize
 Please refer to the following articles when publishing work relating to this library or the ESI model:
 
-	@article{spatialize2025,
+	@article{spatialize2026,
 		author  = {Navarro, Felipe and Ega{\~n}a, {\'A}lvaro F. and Ehrenfeld, Alejandro and Garrido, Felipe and Valenzuela, Mar{\'i}a Jes{\'u}s and S{\'a}nchez-P{\'e}rez, Juan F. },
-		title   = {Spatialize v1.0: A Python/C++ Library for Ensemble Spatial Interpolation},
-		journal = {},
+		title   = {Spatialize v1.0: a Python/C++ library for ensemble spatial interpolation},
+		journal = {Geoscientific Model Development},
+		year    = {2026},
+		volume  = {19},
+		number  = {10},
+		pages   = {4633--4660},
+		doi     = {https://doi.org/10.5194/gmd-19-4633-2026},
+		url     = {https://gmd.copernicus.org/articles/19/4633/2026/},
+		issn    = {}
+		}
+
+	@article{SpatialDistEstimation2025,
+		author  = {Ega{\~n}a, {\'A}lvaro F. and D{\'i}az, Gonzalo and Navarro, Felipe and Maleki, Mohammad and S{\'a}nchez-P{\'e}rez, Juan F.},
+		title   = {Spatial distributional estimation via ensemble spatial analysis},
+		journal = {AIMS Mathematics},
 		year    = {2025},
-		volume  = {},
-		number  = {},
-		pages   = {},
-		doi     = {https://doi.org/10.48550/arXiv.2507.17867},
-		url     = {https://arxiv.org/abs/2507.17867},
+		volume  = {10},
+		number  = {11},
+		pages   = {26351--26388},
+		doi     = {10.3934/math.20251159},
+		url     = {https://www.aimspress.com/article/doi/10.3934/math.20251159},
 		issn    = {}
 		}
 
 	@article{AdaptiveESI2025,
-		author  = {Ega{\~n}a, {\'A}lvaro F. and Valenzuela, María Jesús and Maleki, Mohammad and S{\'a}nchez-P{\'e}rez, Juan F. and Díaz, Gonzalo},
+		author  = {Ega{\~n}a, {\'A}lvaro F. and Valenzuela, Mar{\'i}a Jes{\'u}s and Maleki, Mohammad and S{\'a}nchez-P{\'e}rez, Juan F. and Díaz, Gonzalo},
 		title   = {Adaptive ensemble spatial analysis},
 		journal = {Scientific Reports},
 		year    = {2025},
