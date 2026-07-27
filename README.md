@@ -196,10 +196,9 @@ sim_result = ess_sample(esi_result=result,
 ## Examples
 Beyond the snippets above, this repo contains full notebooks organized by topic:
 
-- `examples/introductory/` — high-level tours of ESA, ESI, ESS, and spatial analysis (spa)
+- `examples/introductory/` — high-level tours of ESI, ESS, and spatial analysis (spa)
 - `examples/esi_fundamentals/` — griddata/nongriddata basics, hyperparameter search, Pareto optimization, precision
-- `examples/esi_implementations/` — 2D/2.5D/3D ESI, Adaptive ESI, Kriging, categorical ESI
-- `examples/ess_fundamentals/` — griddata/nongriddata spatial simulation
+- `examples/esi_implementations/` — 2.5D ESI, Adaptive ESI (2D and 2.5D), categorical ESI
 - `examples/utilities/` — empirical modeling tools, evaluation tools, visualization
 - `examples/how_to/` — task-focused recipes (e.g. custom ESI precision)
 

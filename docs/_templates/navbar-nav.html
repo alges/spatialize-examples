@@ -1,0 +1,33 @@
+{#
+  Override of pydata_sphinx_theme's built-in navbar-nav.html.
+
+  The stock component renders a flat link for every entry in the root
+  document's hidden toctree — here, all 16 example notebooks, which flooded
+  the header with an unreadable link list. Overriding this template
+  (mirrored in docs/source/_templates/ of the main spatialize repo) drops
+  the toctree-derived links and replaces them with exactly three: Home +
+  Documentation (the main spatialize project — a genuinely different
+  Sphinx project/host, so these must be real absolute URLs; no `pathto()`
+  equivalent exists across projects) and Examples (this site's own landing
+  page, via `pathto()` so it resolves correctly from any page depth and
+  stays on this site/host when browsing locally or on a PR preview).
+#}
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link nav-external" href="https://spatialize.readthedocs.io/en/latest/index.html">
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link nav-external" href="https://spatialize.readthedocs.io/en/latest/reference/index.html">
+        Documentation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="{{ pathto('index') }}">
+        Examples
+      </a>
+    </li>
+  </ul>
+</nav>
