@@ -14,6 +14,9 @@ sections:
         title: "A first ensemble map"
         description: "From scattered data to a map, its precision and the members behind both, on a grid and at scattered locations."
         assets: [ESI_procedure.png]
+      - path: 01_getting_started/02_the_session
+        title: "The session"
+        description: "Settings for every call, which of them change only how a result is computed and which change the result."
   - title: Introductory
     notebooks:
       - path: introductory/ess_overview
