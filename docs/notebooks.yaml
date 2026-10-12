@@ -8,12 +8,14 @@ intro: >-
   Worked examples and tutorials for the Spatialize library, grouped by topic. Each page is a
   runnable Jupyter notebook.
 sections:
+  - title: Getting started
+    notebooks:
+      - path: 01_getting_started/01_first_ensemble_map
+        title: "A first ensemble map"
+        description: "From scattered data to a map, its precision and the members behind both, on a grid and at scattered locations."
+        assets: [ESI_procedure.png]
   - title: Introductory
     notebooks:
-      - path: introductory/esi_overview
-        title: "ESI Overview"
-        description: "A conceptual introduction to Ensemble Spatial Interpolation."
-        assets: [ESI_procedure.png]
       - path: introductory/ess_overview
         title: "ESS Overview"
         description: "A first look at Ensemble Spatial Simulation."
@@ -27,12 +29,6 @@ sections:
         description: "The encoder and decoder errors, the frontier between them, and which reading of it holds up against the truth."
   - title: ESI Fundamentals
     notebooks:
-      - path: esi_fundamentals/esi_griddata
-        title: "Gridded Interpolation"
-        description: "Interpolating scattered data onto a regular grid with `esi_griddata`."
-      - path: esi_fundamentals/esi_nongriddata
-        title: "Non-gridded Interpolation"
-        description: "Interpolating at arbitrary scattered target locations with `esi_nongriddata`."
       - path: esi_fundamentals/esi_precision
         title: "Precision Metrics"
         description: "Understanding and customizing ESI precision/error metrics."
