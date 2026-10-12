@@ -20,6 +20,11 @@ sections:
       - path: introductory/spa_overview
         title: "SPA Overview"
         description: "Introducing the spatial analysis utilities module."
+  - title: Choosing an ensemble
+    notebooks:
+      - path: 03_choosing_an_ensemble/07_pareto_search
+        title: "Choosing an ensemble with the Pareto search"
+        description: "The encoder and decoder errors, the frontier between them, and which reading of it holds up against the truth."
   - title: ESI Fundamentals
     notebooks:
       - path: esi_fundamentals/esi_griddata
@@ -28,12 +33,6 @@ sections:
       - path: esi_fundamentals/esi_nongriddata
         title: "Non-gridded Interpolation"
         description: "Interpolating at arbitrary scattered target locations with `esi_nongriddata`."
-      - path: esi_fundamentals/esi_hparams_search
-        title: "Hyperparameter Search"
-        description: "Tuning ESI parameters with k-fold cross-validated grid search."
-      - path: esi_fundamentals/esi_pareto_optimization
-        title: "Pareto Optimization"
-        description: "Jointly optimizing CV error against an empirical robustness bound."
       - path: esi_fundamentals/esi_precision
         title: "Precision Metrics"
         description: "Understanding and customizing ESI precision/error metrics."
