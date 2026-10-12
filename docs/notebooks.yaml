@@ -1,0 +1,69 @@
+# The gallery: one entry per notebook, in reading order. docs/conf.py reads it to copy the notebooks
+# into the Sphinx tree and to write docs/index.md; docs/scripts/generate_thumbnails.py reads it to
+# draw the thumbnails. Edit this file only; index.md is generated (and ignored by git).
+#
+# path: the notebook under examples/, without .ipynb; assets: sibling files the notebook shows.
+# Only tracked notebooks belong here (work in progress stays out of the gallery).
+intro: >-
+  Worked examples and tutorials for the Spatialize library, grouped by topic. Each page is a
+  runnable Jupyter notebook.
+sections:
+  - title: Introductory
+    notebooks:
+      - path: introductory/esi_overview
+        title: "ESI Overview"
+        description: "A conceptual introduction to Ensemble Spatial Interpolation."
+        assets: [ESI_procedure.png]
+      - path: introductory/ess_overview
+        title: "ESS Overview"
+        description: "A first look at Ensemble Spatial Simulation."
+      - path: introductory/spa_overview
+        title: "SPA Overview"
+        description: "Introducing the spatial analysis utilities module."
+  - title: ESI Fundamentals
+    notebooks:
+      - path: esi_fundamentals/esi_griddata
+        title: "Gridded Interpolation"
+        description: "Interpolating scattered data onto a regular grid with `esi_griddata`."
+      - path: esi_fundamentals/esi_nongriddata
+        title: "Non-gridded Interpolation"
+        description: "Interpolating at arbitrary scattered target locations with `esi_nongriddata`."
+      - path: esi_fundamentals/esi_hparams_search
+        title: "Hyperparameter Search"
+        description: "Tuning ESI parameters with k-fold cross-validated grid search."
+      - path: esi_fundamentals/esi_pareto_optimization
+        title: "Pareto Optimization"
+        description: "Jointly optimizing CV error against an empirical robustness bound."
+      - path: esi_fundamentals/esi_precision
+        title: "Precision Metrics"
+        description: "Understanding and customizing ESI precision/error metrics."
+  - title: ESI Implementations
+    notebooks:
+      - path: esi_implementations/esi_2.5d
+        title: "2.5D Interpolation"
+        description: "Interpolating 2D spatial data with an elevation dimension."
+      - path: esi_implementations/adaptive_esi_2d
+        title: "Adaptive ESI (2D)"
+        description: "Cell-by-cell parameter optimization for anisotropic 2D fields."
+      - path: esi_implementations/adaptive_esi_2.5d
+        title: "Adaptive ESI (2.5D)"
+        description: "Adaptive ESI extended to 2D-plus-elevation data."
+      - path: esi_implementations/categorical_esi
+        title: "Categorical ESI"
+        description: "Ensemble spatial interpolation for categorical/classification data."
+  - title: How-To
+    notebooks:
+      - path: how_to/custom_esi_precision
+        title: "Custom Precision Functions"
+        description: "Defining and plugging in custom precision functions beyond the defaults."
+  - title: Utilities
+    notebooks:
+      - path: utilities/empirical_tools
+        title: "Empirical Tools"
+        description: "Fitting and querying empirical probabilistic models over ensemble members."
+      - path: utilities/evaluation_tools
+        title: "Evaluation Tools"
+        description: "Benchmarking helpers: synthetic scenarios, metrics, and baselines."
+      - path: utilities/visualization_tools
+        title: "Visualization Tools"
+        description: "Themed plotting utilities for spatial data and results."

@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Generate gallery thumbnails for the docs build.
 
-For each of the 16 published notebooks, extracts the last image/png output
-found in any cell and writes it to ``docs/_static/thumbnails/<name>.png``.
+For each notebook of the manifest (docs/notebooks.yaml), extracts the last image/png output
+found in any cell and writes it to ``docs/_static/thumbnails/`` under the name given by
+``gallery.thumbnail``.
 Notebooks with no image output get a copy of a generic placeholder thumbnail.
 
 Idempotent: safe to re-run, always overwrites with fresh output.
 """
 
 import base64
+import sys
 from pathlib import Path
 
 import nbformat
@@ -20,25 +22,8 @@ EXAMPLES_SRC = REPO_ROOT / "examples"
 THUMBS_DIR = DOCS_DIR / "_static" / "thumbnails"
 PLACEHOLDER_PATH = THUMBS_DIR / "_placeholder.png"
 
-# Keep in sync with the NOTEBOOKS list in docs/conf.py.
-NOTEBOOKS = [
-    ("introductory", "esi_overview"),
-    ("introductory", "ess_overview"),
-    ("introductory", "spa_overview"),
-    ("esi_fundamentals", "esi_griddata"),
-    ("esi_fundamentals", "esi_nongriddata"),
-    ("esi_fundamentals", "esi_hparams_search"),
-    ("esi_fundamentals", "esi_pareto_optimization"),
-    ("esi_fundamentals", "esi_precision"),
-    ("esi_implementations", "esi_2.5d"),
-    ("esi_implementations", "adaptive_esi_2d"),
-    ("esi_implementations", "adaptive_esi_2.5d"),
-    ("esi_implementations", "categorical_esi"),
-    ("how_to", "custom_esi_precision"),
-    ("utilities", "empirical_tools"),
-    ("utilities", "evaluation_tools"),
-    ("utilities", "visualization_tools"),
-]
+sys.path.insert(0, str(DOCS_DIR))
+import gallery  # noqa: E402  (docs/gallery.py: the manifest docs/notebooks.yaml)
 
 
 def _ensure_placeholder() -> None:
@@ -68,9 +53,10 @@ def main() -> None:
     _ensure_placeholder()
 
     generated, placeholders = [], []
-    for category, name in NOTEBOOKS:
-        notebook_path = EXAMPLES_SRC / category / f"{name}.ipynb"
-        dest = THUMBS_DIR / f"{name}.png"
+    for nb in gallery.notebooks():
+        name = nb["path"]
+        notebook_path = EXAMPLES_SRC / f"{name}.ipynb"
+        dest = THUMBS_DIR / gallery.thumbnail(name)
 
         png_bytes = _last_png_output(notebook_path)
         if png_bytes is not None:

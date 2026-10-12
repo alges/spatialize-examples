@@ -1,6 +1,7 @@
 """Sphinx configuration for the Spatialize Examples documentation gallery."""
 
 import shutil
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -11,56 +12,25 @@ REPO_ROOT = DOCS_DIR.parent
 EXAMPLES_SRC = REPO_ROOT / "examples"
 EXAMPLES_DST = DOCS_DIR / "examples"
 
-# Explicit list of the 16 tracked notebooks to publish, as (category, name)
-# pairs. Keep this list in sync with the toctree in index.md.
-#
-# NOTE: examples/esi_implementations/esi_kriging.ipynb and
-# examples/introductory/esi_overview.py are intentionally EXCLUDED (untracked
-# work-in-progress files) and must never be added here.
-NOTEBOOKS = [
-    ("introductory", "esi_overview"),
-    ("introductory", "ess_overview"),
-    ("introductory", "spa_overview"),
-    ("esi_fundamentals", "esi_griddata"),
-    ("esi_fundamentals", "esi_nongriddata"),
-    ("esi_fundamentals", "esi_hparams_search"),
-    ("esi_fundamentals", "esi_pareto_optimization"),
-    ("esi_fundamentals", "esi_precision"),
-    ("esi_implementations", "esi_2.5d"),
-    ("esi_implementations", "adaptive_esi_2d"),
-    ("esi_implementations", "adaptive_esi_2.5d"),
-    ("esi_implementations", "categorical_esi"),
-    ("how_to", "custom_esi_precision"),
-    ("utilities", "empirical_tools"),
-    ("utilities", "evaluation_tools"),
-    ("utilities", "visualization_tools"),
-]
-
-# Sibling non-notebook assets (e.g. images) that notebooks reference via
-# relative paths, and therefore must be copied alongside them.
-EXTRA_ASSETS = [
-    ("introductory", "ESI_procedure.png"),
-]
+sys.path.insert(0, str(DOCS_DIR))
+import gallery  # noqa: E402  (docs/gallery.py: the manifest docs/notebooks.yaml)
 
 
 def _sync_example_sources() -> None:
-    """Copy the published notebooks (and their sibling assets) into the
-    Sphinx source tree, overwriting on every build so the docs build never
-    drifts from ``examples/``. Sphinx cannot include files that live outside
-    its source directory, so this makes the copies idempotent and keeps
-    ``docs/examples/`` out of version control (see docs/.gitignore).
+    """Copy the notebooks of the manifest (and their sibling assets) into the Sphinx source tree,
+    overwriting on every build so the docs build never drifts from ``examples/``. Sphinx cannot
+    include files that live outside its source directory, so this makes the copies idempotent and
+    keeps ``docs/examples/`` out of version control (see docs/.gitignore). The landing page
+    ``index.md`` is written from the same manifest.
     """
-    for category, name in NOTEBOOKS:
-        src = EXAMPLES_SRC / category / f"{name}.ipynb"
-        dst_dir = EXAMPLES_DST / category
-        dst_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(src, dst_dir / f"{name}.ipynb")
-
-    for category, filename in EXTRA_ASSETS:
-        src = EXAMPLES_SRC / category / filename
-        dst_dir = EXAMPLES_DST / category
-        dst_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(src, dst_dir / filename)
+    for nb in gallery.notebooks():
+        src = EXAMPLES_SRC / f"{nb['path']}.ipynb"
+        dst = EXAMPLES_DST / f"{nb['path']}.ipynb"
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dst)
+        for asset in nb.get("assets", []):
+            shutil.copyfile(src.parent / asset, dst.parent / asset)
+    gallery.write_index(DOCS_DIR / "index.md")
 
 
 _sync_example_sources()
