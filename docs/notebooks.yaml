@@ -49,6 +49,11 @@ sections:
       - path: 04_uncertainty/10_probabilistic_decoders
         title: "The probabilistic decoders"
         description: "Members that are observed values, intervals that cover, and how to read the law they give."
+  - title: Classical geostatistics
+    notebooks:
+      - path: 10_classical_geostatistics/24_kriging_decoder_global_kriging
+        title: "The kriging decoder and global kriging"
+        description: "When an ensemble of local krigings recovers global kriging, how close it comes elsewhere, and what it costs."
   - title: ESI Fundamentals
     notebooks:
       - path: esi_fundamentals/esi_precision
