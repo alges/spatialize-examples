@@ -44,6 +44,11 @@ sections:
       - path: 03_choosing_an_ensemble/07_pareto_search
         title: "Choosing an ensemble with the Pareto search"
         description: "The encoder and decoder errors, the frontier between them, and which reading of it holds up against the truth."
+  - title: Uncertainty
+    notebooks:
+      - path: 04_uncertainty/10_probabilistic_decoders
+        title: "The probabilistic decoders"
+        description: "Members that are observed values, intervals that cover, and how to read the law they give."
   - title: ESI Fundamentals
     notebooks:
       - path: esi_fundamentals/esi_precision
