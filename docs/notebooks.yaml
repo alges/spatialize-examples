@@ -30,9 +30,15 @@ sections:
       - path: 02_encoders_and_decoders/03_mondrian_and_voronoi
         title: "Encoders, Mondrian and Voronoi"
         description: "The cells of each partition process, the co-occurrence they give, and when the encoder changes the map."
+      - path: 02_encoders_and_decoders/04_granularity_alpha_and_range
+        title: "The granularity alpha and the range of the field"
+        description: "Wide cells impose the partition's structure, narrow cells trace the field, and more partitions are a false cure."
       - path: 02_encoders_and_decoders/05_the_decoders
         title: "The decoders"
         description: "Averaging and drawing decoders side by side, judged by the map, the intervals and the atoms, and which to choose for what."
+      - path: 02_encoders_and_decoders/06_cells_without_data
+        title: "Cells without data"
+        description: "The residual weight, and what nan, mark and coarsen say where the data do not reach."
   - title: Choosing an ensemble
     notebooks:
       - path: 03_choosing_an_ensemble/07_pareto_search
