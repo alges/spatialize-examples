@@ -51,6 +51,9 @@ sections:
         description: "Members that are observed values, intervals that cover, and how to read the law they give."
   - title: Classical geostatistics
     notebooks:
+      - path: 10_classical_geostatistics/23_variogram_inference
+        title: "The variogram as an inference"
+        description: "The direction and ranges of a field read off an ensemble's map and members, against a variogram fitted to the data."
       - path: 10_classical_geostatistics/24_kriging_decoder_global_kriging
         title: "The kriging decoder and global kriging"
         description: "When an ensemble of local krigings recovers global kriging, how close it comes elsewhere, and what it costs."
