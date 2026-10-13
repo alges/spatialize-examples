@@ -27,6 +27,9 @@ sections:
         description: "Introducing the spatial analysis utilities module."
   - title: Encoders and decoders
     notebooks:
+      - path: 02_encoders_and_decoders/03_mondrian_and_voronoi
+        title: "Encoders, Mondrian and Voronoi"
+        description: "The cells of each partition process, the co-occurrence they give, and when the encoder changes the map."
       - path: 02_encoders_and_decoders/05_the_decoders
         title: "The decoders"
         description: "Averaging and drawing decoders side by side, judged by the map, the intervals and the atoms, and which to choose for what."
