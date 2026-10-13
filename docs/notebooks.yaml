@@ -25,6 +25,11 @@ sections:
       - path: introductory/spa_overview
         title: "SPA Overview"
         description: "Introducing the spatial analysis utilities module."
+  - title: Encoders and decoders
+    notebooks:
+      - path: 02_encoders_and_decoders/05_the_decoders
+        title: "The decoders"
+        description: "Averaging and drawing decoders side by side, judged by the map, the intervals and the atoms, and which to choose for what."
   - title: Choosing an ensemble
     notebooks:
       - path: 03_choosing_an_ensemble/07_pareto_search
