@@ -54,6 +54,11 @@ sections:
       - path: 10_classical_geostatistics/24_kriging_decoder_global_kriging
         title: "The kriging decoder and global kriging"
         description: "When an ensemble of local krigings recovers global kriging, how close it comes elsewhere, and what it costs."
+  - title: Extending Spatialize
+    notebooks:
+      - path: 11_extending/27_python_numba_decoder
+        title: "A decoder in Python and numba"
+        description: "A local plane with residual weighting, checked on known answers, cross-validated honestly, compiled and judged against adaptive IDW."
   - title: ESI Fundamentals
     notebooks:
       - path: esi_fundamentals/esi_precision
