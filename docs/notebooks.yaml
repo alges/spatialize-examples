@@ -54,6 +54,14 @@ sections:
       - path: 05_situations/13_rain
         title: "Rain, an atom at zero"
         description: "Dry places the averaging decoders dilute, read from the members of the drawing decoders, on a simulated field and on the Maipo rain gauges."
+  - title: Categories
+    notebooks:
+      - path: 08_categorical/20_categories
+        title: "Estimating categories"
+        description: "A geological map estimated with every classifier, the probability of each category, and the disagreement that points at the errors."
+      - path: 08_categorical/21_aggregations
+        title: "Aggregating categorical ensembles"
+        description: "The vote, its weighted and ordinal forms, Dawid–Skene and forbidden contacts, with every classifier, against the truth."
   - title: Classical geostatistics
     notebooks:
       - path: 10_classical_geostatistics/23_variogram_inference
