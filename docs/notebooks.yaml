@@ -25,13 +25,13 @@ sections:
       - path: introductory/spa_overview
         title: "SPA Overview"
         description: "Introducing the spatial analysis utilities module."
-  - title: Encoders and decoders
+  - title: The parts of an ensemble
     notebooks:
       - path: 02_encoders_and_decoders/03_mondrian_and_voronoi
-        title: "Encoders, Mondrian and Voronoi"
+        title: "Encoders, Mondrian or Voronoi"
         description: "The cells of each partition process, the co-occurrence they give, and when the encoder changes the map."
       - path: 02_encoders_and_decoders/04_granularity_alpha_and_range
-        title: "The granularity alpha and the range of the field"
+        title: "The granularity alpha against the range of the field"
         description: "Wide cells impose the partition's structure, narrow cells trace the field, and more partitions are a false cure."
       - path: 02_encoders_and_decoders/05_the_decoders
         title: "The decoders"
@@ -60,12 +60,12 @@ sections:
         title: "The variogram as an inference"
         description: "The direction and ranges of a field read off an ensemble's map and members, against a variogram fitted to the data."
       - path: 10_classical_geostatistics/24_kriging_decoder_global_kriging
-        title: "The kriging decoder and global kriging"
+        title: "The kriging decoder against global kriging"
         description: "When an ensemble of local krigings recovers global kriging, how close it comes elsewhere, and what it costs."
   - title: Extending Spatialize
     notebooks:
       - path: 11_extending/27_python_numba_decoder
-        title: "A decoder in Python and numba"
+        title: "A decoder written in Python, compiled with numba"
         description: "A local plane with residual weighting, checked on known answers, cross-validated honestly, compiled and judged against adaptive IDW."
   - title: ESI Fundamentals
     notebooks:
