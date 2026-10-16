@@ -49,6 +49,9 @@ sections:
       - path: 04_uncertainty/10_probabilistic_decoders
         title: "The probabilistic decoders"
         description: "Members that are observed values, intervals that cover, and how to read the law they give."
+      - path: 04_uncertainty/11_asymmetric_losses
+        title: "Choosing a quantile"
+        description: "Costs over and under that set the level to read, the ensemble chosen by the loss of the use, expectiles, value at risk and expected shortfall."
   - title: Situations
     notebooks:
       - path: 05_situations/12_anisotropic_field
@@ -63,6 +66,12 @@ sections:
       - path: 05_situations/15_non_stationary_field
         title: "A non-stationary field"
         description: "A law at every location from the members, against indicator kriging and its broken order relations."
+      - path: 05_situations/16_exceedance_areas
+        title: "Exceedance areas"
+        description: "The law of the area above a limit from the members as fields, against the map of means and the mean probability."
+      - path: 05_situations/17_reporting_a_resource
+        title: "Reporting a resource"
+        description: "A band around the grade–tonnage curve, and resource categories from the law of each block against the kriging variance."
   - title: Categories
     notebooks:
       - path: 08_categorical/20_categories
