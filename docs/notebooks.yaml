@@ -51,9 +51,18 @@ sections:
         description: "Members that are observed values, intervals that cover, and how to read the law they give."
   - title: Situations
     notebooks:
+      - path: 05_situations/12_anisotropic_field
+        title: "An anisotropic field"
+        description: "Kriging with the true anisotropic variogram, with an isotropic fit, and the ensemble told nothing, over ten realisations."
       - path: 05_situations/13_rain
         title: "Rain, an atom at zero"
         description: "Dry places the averaging decoders dilute, read from the members of the drawing decoders, on a simulated field and on the Maipo rain gauges."
+      - path: 05_situations/14_heavy_tails
+        title: "Heavy tails"
+        description: "The median of the members against their mean, maps that never leave the range of the data, and kriging below the smallest datum."
+      - path: 05_situations/15_non_stationary_field
+        title: "A non-stationary field"
+        description: "A law at every location from the members, against indicator kriging and its broken order relations."
   - title: Categories
     notebooks:
       - path: 08_categorical/20_categories
