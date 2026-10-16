@@ -68,10 +68,10 @@ sections:
         description: "A law at every location from the members, against indicator kriging and its broken order relations."
       - path: 05_situations/16_exceedance_areas
         title: "Exceedance areas"
-        description: "The law of the area above a limit from the members as fields, against the map of means and the mean probability."
-      - path: 05_situations/17_reporting_a_resource
-        title: "Reporting a resource"
-        description: "A band around the grade–tonnage curve, and resource categories from the law of each block against the kriging variance."
+        description: "The law of the area above a limit from the members as fields, the places for a new measurement, against the map of means and the mean probability."
+      - path: 05_situations/17_summaries_over_regions
+        title: "Summaries over regions"
+        description: "A band around the share above every threshold with its mean, and classes of confidence from the law of each block against the kriging variance."
   - title: Categories
     notebooks:
       - path: 08_categorical/20_categories
