@@ -88,6 +88,11 @@ sections:
       - path: 08_categorical/21_aggregations
         title: "Aggregating categorical ensembles"
         description: "The vote, its weighted and ordinal forms, Dawid–Skene and forbidden contacts, with every classifier, against the truth."
+  - title: Three dimensions
+    notebooks:
+      - path: 09_three_dimensions/22_three_dimensions
+        title: "Three dimensions"
+        description: "A layered volume sampled along vertical profiles, the adaptive decoders against plain IDW, slices of the estimate and its spread, and data along boreholes."
   - title: Classical geostatistics
     notebooks:
       - path: 10_classical_geostatistics/23_variogram_inference
@@ -96,6 +101,12 @@ sections:
       - path: 10_classical_geostatistics/24_kriging_decoder_global_kriging
         title: "The kriging decoder against global kriging"
         description: "When an ensemble of local krigings recovers global kriging, how close it comes elsewhere, and what it costs."
+      - path: 10_classical_geostatistics/25_classical_interpolators
+        title: "Beyond the classical interpolators"
+        description: "SciPy, inverse distance, PyKrige and Spatialize with their cross-validated settings, on fields the second order describes and on channels and mosaics it cannot."
+      - path: 10_classical_geostatistics/26_pairs_are_not_enough
+        title: "Pairs are not enough"
+        description: "Partition processes that agree on pairs and part for triples, laws with one covariance and two third moments, and maps of two fields with one variogram."
   - title: Extending Spatialize
     notebooks:
       - path: 11_extending/27_python_numba_decoder
