@@ -19,9 +19,6 @@ sections:
         description: "Settings for every call, which of them change only how a result is computed and which change the result."
   - title: Introductory
     notebooks:
-      - path: introductory/ess_overview
-        title: "ESS Overview"
-        description: "A first look at Ensemble Spatial Simulation."
       - path: introductory/spa_overview
         title: "SPA Overview"
         description: "Introducing the spatial analysis utilities module."
@@ -44,8 +41,14 @@ sections:
       - path: 03_choosing_an_ensemble/07_pareto_search
         title: "Choosing an ensemble with the Pareto search"
         description: "The encoder and decoder errors, the frontier between them, and which reading of it holds up against the truth."
+      - path: 03_choosing_an_ensemble/08_how_many_partitions
+        title: "How many partitions?"
+        description: "The spread across seeds falling as one over the root of the number, the error against the truth reaching its floor, and the tails that need more."
   - title: Uncertainty
     notebooks:
+      - path: 04_uncertainty/09_uncertainty_at_a_location
+        title: "Uncertainty at a location"
+        description: "The precision of the estimate against its error, the law at one location, and widened laws whose coverage follows the field."
       - path: 04_uncertainty/10_probabilistic_decoders
         title: "The probabilistic decoders"
         description: "Members that are observed values, intervals that cover, and how to read the law they give."
@@ -72,6 +75,11 @@ sections:
       - path: 05_situations/17_summaries_over_regions
         title: "Summaries over regions"
         description: "A band around the share above every threshold with its mean, and classes of confidence from the law of each block against the kriging variance."
+  - title: Simulation
+    notebooks:
+      - path: 06_simulation/18_ensemble_simulation
+        title: "Ensemble spatial simulation"
+        description: "Fields drawn location by location from the fitted laws, the geometry they keep and lose, and the local models compared."
   - title: Categories
     notebooks:
       - path: 08_categorical/20_categories
@@ -93,35 +101,8 @@ sections:
       - path: 11_extending/27_python_numba_decoder
         title: "A decoder written in Python, compiled with numba"
         description: "A local plane with residual weighting, checked on known answers, cross-validated honestly, compiled and judged against adaptive IDW."
-  - title: ESI Fundamentals
-    notebooks:
-      - path: esi_fundamentals/esi_precision
-        title: "Precision Metrics"
-        description: "Understanding and customizing ESI precision/error metrics."
-  - title: ESI Implementations
-    notebooks:
-      - path: esi_implementations/esi_2.5d
-        title: "2.5D Interpolation"
-        description: "Interpolating 2D spatial data with an elevation dimension."
-      - path: esi_implementations/adaptive_esi_2d
-        title: "Adaptive ESI (2D)"
-        description: "Cell-by-cell parameter optimization for anisotropic 2D fields."
-      - path: esi_implementations/adaptive_esi_2.5d
-        title: "Adaptive ESI (2.5D)"
-        description: "Adaptive ESI extended to 2D-plus-elevation data."
-      - path: esi_implementations/categorical_esi
-        title: "Categorical ESI"
-        description: "Ensemble spatial interpolation for categorical/classification data."
-  - title: How-To
-    notebooks:
-      - path: how_to/custom_esi_precision
-        title: "Custom Precision Functions"
-        description: "Defining and plugging in custom precision functions beyond the defaults."
   - title: Utilities
     notebooks:
-      - path: utilities/empirical_tools
-        title: "Empirical Tools"
-        description: "Fitting and querying empirical probabilistic models over ensemble members."
       - path: utilities/evaluation_tools
         title: "Evaluation Tools"
         description: "Benchmarking helpers: synthetic scenarios, metrics, and baselines."
