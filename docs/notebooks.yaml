@@ -112,11 +112,16 @@ sections:
       - path: 11_extending/27_python_numba_decoder
         title: "A decoder written in Python, compiled with numba"
         description: "A local plane with residual weighting, checked on known answers, cross-validated honestly, compiled and judged against adaptive IDW."
+  - title: Information
+    notebooks:
+      - path: 12_information/28_entropy_and_mutual_information
+        title: "Spatial entropy, mutual information"
+        description: "Entropy maps that follow the field with a drawing decoder, and where two variables measured apart go together."
   - title: Utilities
     notebooks:
-      - path: utilities/evaluation_tools
-        title: "Evaluation Tools"
-        description: "Benchmarking helpers: synthetic scenarios, metrics, and baselines."
-      - path: utilities/visualization_tools
-        title: "Visualization Tools"
-        description: "Themed plotting utilities for spatial data and results."
+      - path: 13_utilities/29_evaluation
+        title: "Evaluating an interpolator"
+        description: "Scenarios with a truth, metrics for amounts and categories, cross-validation of any interpolator, classical baselines."
+      - path: 13_utilities/30_plotting_saving_loading
+        title: "Plotting, saving, loading"
+        description: "Scientific palettes, themes, maps on grids, irregular areas and categories, quick plots, and results kept on disk."
