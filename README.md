@@ -194,13 +194,22 @@ sim_result = ess_sample(esi_result=result,
 ```
 
 ## Examples
-Beyond the snippets above, this repo contains full notebooks organized by topic:
+Beyond the snippets above, this repo holds 30 runnable notebooks, numbered in reading order and grouped
+by task. The rendered gallery is built from `docs/notebooks.yaml`.
 
-- `examples/introductory/` — high-level tours of ESI, ESS, and spatial analysis (spa)
-- `examples/esi_fundamentals/` — griddata/nongriddata basics, hyperparameter search, Pareto optimization, precision
-- `examples/esi_implementations/` — 2.5D ESI, Adaptive ESI (2D and 2.5D), categorical ESI
-- `examples/utilities/` — empirical modeling tools, evaluation tools, visualization
-- `examples/how_to/` — task-focused recipes (e.g. custom ESI precision)
+- `examples/01_getting_started/` — Getting started: 01 A first ensemble map; 02 The session
+- `examples/02_encoders_and_decoders/` — The parts of an ensemble: 03 Encoders, Mondrian or Voronoi; 04 The granularity alpha against the range of the field; 05 The decoders; 06 Cells without data
+- `examples/03_choosing_an_ensemble/` — Choosing an ensemble: 07 Choosing an ensemble with the Pareto search; 08 How many partitions?
+- `examples/04_uncertainty/` — Uncertainty: 09 Uncertainty at a location; 10 The probabilistic decoders; 11 Choosing a quantile
+- `examples/05_situations/` — Situations: 12 An anisotropic field; 13 Rain, an atom at zero; 14 Heavy tails; 15 A non-stationary field; 16 Exceedance areas; 17 Summaries over regions
+- `examples/06_simulation/` — Simulation: 18 Ensemble spatial simulation
+- `examples/07_posterior_eda/` — Posterior analysis: 19 Posterior analysis of the data
+- `examples/08_categorical/` — Categories: 20 Estimating categories; 21 Aggregating categorical ensembles
+- `examples/09_three_dimensions/` — Three dimensions: 22 Three dimensions
+- `examples/10_classical_geostatistics/` — Classical geostatistics: 23 The variogram as an inference; 24 The kriging decoder against global kriging; 25 Beyond the classical interpolators; 26 Pairs are not enough
+- `examples/11_extending/` — Extending Spatialize: 27 A decoder written in Python, compiled with numba
+- `examples/12_information/` — Information: 28 Spatial entropy, mutual information
+- `examples/13_utilities/` — Utilities: 29 Evaluating an interpolator; 30 Plotting, saving, loading
 
 ## License
 [Apache-2.0](LICENSE)
