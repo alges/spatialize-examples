@@ -17,11 +17,6 @@ sections:
       - path: 01_getting_started/02_the_session
         title: "The session"
         description: "Settings for every call, which of them change only how a result is computed and which change the result."
-  - title: Introductory
-    notebooks:
-      - path: introductory/spa_overview
-        title: "SPA Overview"
-        description: "Introducing the spatial analysis utilities module."
   - title: The parts of an ensemble
     notebooks:
       - path: 02_encoders_and_decoders/03_mondrian_and_voronoi
@@ -80,6 +75,11 @@ sections:
       - path: 06_simulation/18_ensemble_simulation
         title: "Ensemble spatial simulation"
         description: "Fields drawn location by location from the fitted laws, the geometry they keep and lose, and the local models compared."
+  - title: Posterior analysis
+    notebooks:
+      - path: 07_posterior_eda/19_posterior_eda
+        title: "Posterior analysis of the data"
+        description: "Each datum read against the law the other data give it, calibration first, flags whose false discoveries are measured, lone errors told from sub-populations, and a second variable that finds what the neighbours miss."
   - title: Categories
     notebooks:
       - path: 08_categorical/20_categories
